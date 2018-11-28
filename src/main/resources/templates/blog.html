@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"/>
+</head>
+<body>
+    <h1>Les differents articles </h1>
+    <ul th:each="article: ${allArticles}">
+        <li th:text="${article.getTitle()}"/>
+        <li th:text="${article.getAuthor()}"/>
+    </ul>
+
+</body>
+</html>
